@@ -620,3 +620,11 @@ body:not(.user-is-tabbing) a:focus {
   float: right;
   margin-left: 400px;
 }
+.client__font{
+    font-family: Monospace;
+   font-size:15px;
+}
+.logo__whatsapp{
+    width: 40px;
+    border-radius: 10px;
+}
