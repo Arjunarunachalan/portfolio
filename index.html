@@ -27,13 +27,16 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">About Me</a></li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
+            <a href="#about" class="nav__link">Services</a>
           </li>
           <li class="nav__item">
-            <a href="#footer" class="nav__link">Contact me</a>
+            <a href="#footer" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#footer" class="nav__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -54,45 +57,134 @@
 
   <main role="main">
 
-    <!-- ***** Work ***** -->
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            <p>
+              As a React.js developer, I am passionate
+              about creating high-quality and user-friendly
+              web applications. With One years of
+              experience in React.js development, I have
+              honed my skills in component-based
+              architecture, state management, and other
+              key React.js concepts. I am also well-versed
+              in other front-end technologies such as HTML,
+              CSS, and JavaScript, allowing me to build
+              seamless and cohesive user interfaces.
+            </p>
+            <!-- Provide a link to your resume -->
+            <a href="./resume.pdf" class="link__text" download>My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- Add a nice photo of yourself -->
+            <img class="about__photo" src="./images/profile-pic (3).png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- services -->
+    <section class="services" id="services">
+      <div class="row">
+          <h2>What I Do</h2>
+
+<div class="servicecard">
+  
+  <div>
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1> 
+      <p>Architect & Engineer</p> 
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1> 
+      <p>Architect & Engineer</p> 
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div>
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1> 
+      <p>Architect & Engineer</p> 
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+  </div>
+    </div>
+
+      </div>
+           
+    
+      
+    </section>\
+
+        <!-- ***** Work ***** -->
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>Recent Works</h2>
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Relieva Globals</h3>
-              <p>
-                
-                It is a web 3.0 upcoming project. Reliva Global provides Crypto Currencies
-                and NFT Trading,Inversing and referral and reward systems. I have built
-                Next JS Based Dashboard and application for managing the Coins and users.
-                
-              </p>
               
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Next js</li>
-              </ul>
 
-              <div class="work__links">
-                <a href="https://www.relivaglobal.com/" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
+<div class="wrapper">
+  <div class="card"><img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+    <div class="info">
+      <h1>Mountain</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&amp;fit=crop&amp;w=750&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+    <div class="info">
+      <h1>Road</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&amp;fit=crop&amp;w=311&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+    <div class="info">
+      <h1>Protester</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+</div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/relieva.png" class="work__image" alt="Project 1" />
-            </div>
+             
           </div>
 
           
@@ -116,35 +208,7 @@
 
     <!-- ***** About ***** -->
 
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              As a React.js developer, I am passionate
-about creating high-quality and user-friendly
-web applications. With One years of
-experience in React.js development, I have
-honed my skills in component-based
-architecture, state management, and other
-key React.js concepts. I am also well-versed
-in other front-end technologies such as HTML,
-CSS, and JavaScript, allowing me to build
-seamless and cohesive user interfaces.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="./resume.pdf" class="link__text" download>My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/profile-pic (3).png" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
+    
   </main>
 
   <!-- ***** Contact ***** -->
