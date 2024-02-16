@@ -23,25 +23,31 @@
 
   <!-- ***** Header ***** -->
 
-  <header class="header" role="banner" id="top">
+
+  <header class="header" role="banner" id="top" style=" width: 100% ;
+   max-width:100%; margin-top:20px;  ">
     <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">About Me</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">Services</a>
+      <nav class="nav" role="navigation" >
+        <ul class="nav__items" style="display: flex; flex-direction: row; gap: 25px;">
+          <li class="nav__item" style="padding: 0px; margin: 0px;" >
+            <a href="#home" class="nav__link">Home</a>
+            </li>
+          <li class="nav__item" style="padding: 0px; margin: 0px;">
+          <a href="#about" class="nav__link">AboutMe</a>
           </li>
-          <li class="nav__item">
-            <a href="#footer" class="nav__link">Portfolio</a>
+          <li class="nav__item" style="padding: 0px; margin: 0px;">
+            <a href="#services" class="nav__link">Services</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item" style="padding: 0px; margin: 0px;">
+            <a href="#portfolio" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item" style="padding: 0px; margin: 0px;">
             <a href="#footer" class="nav__link">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="header__text-box row">
+    <div class="header__text-box row" id="home">
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
@@ -50,14 +56,29 @@
         <!-- Put a small paragraph about yourself -->
         <p>A Web Developer based in Kerala,Inda.</p>
         <a href="#footer" class="btn btn--pink">Get in touch</a>
+
+        <div>
+        <h1 class="findmeon">FIND ME ON</h1>
+        </div>
+    <div class="socialicons">
+      
+   <a href="https://github.com/Arjunarunachalan" class="singleicon">
+   <img src="./images/mingcute--github-line.svg" alt="github">
+   </a>
+   <a href="https://www.linkedin.com/in/arjundeveloper/" class="singleicon">
+   <img src="./images/mdi--linkedin (1).svg" alt="linkedin">
+   </a>
+   <a href="https://www.instagram.com/itz_arjun._/" class="singleicon">
+   <img src="./images/mdi--instagram.svg" alt="instagram">
+   </a>
+
+    </div>
         
       </div>
     </div> 
   </header>
 
   <main role="main">
-
-
     <!-- about -->
     <section class="about" id="about">
       <div class="row">
@@ -66,19 +87,13 @@
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
-              As a React.js developer, I am passionate
-              about creating high-quality and user-friendly
-              web applications. With One years of
-              experience in React.js development, I have
-              honed my skills in component-based
-              architecture, state management, and other
-              key React.js concepts. I am also well-versed
-              in other front-end technologies such as HTML,
-              CSS, and JavaScript, allowing me to build
-              seamless and cohesive user interfaces.
+              "An artisan of the MERN stack, self-taught,
+                Passionate brushstrokes on React's canvas sought.
+                With Node.js and MongoDB, my backend blooms,
+                Crafting digital marvels, beauty in every room."
             </p>
             <!-- Provide a link to your resume -->
-            <a href="./resume.pdf" class="link__text" download>My Resume</a>
+            <a href="./Resume2024.pdf" class="link__text" download>My Resume</a>
           </div>
 
           <div class="about__photo-container">
@@ -90,169 +105,149 @@
     </section>
   
     <!-- services -->
-    <section class="services" id="services">
+    <section class="services" id="services" style="padding: 30px;">
+  
       <div class="row">
           <h2>What I Do</h2>
 
-<div class="servicecard">
-  
-  <div>
-    <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-  </div>
-
-  <div>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-  </div>
-  <div>
-    <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-  </div>
-    </div>
-
+          <div class="servicecards">
+          
+      <div style="width: 300px; height: 380px; border-radius: 10px;
+      background-color: #1e282e65; display: flex; flex-direction:column;">
+        <img src="./images/Untitled Project (1)2.jpg" alt="" style="width:300px !important; height: 180px;
+        object-fit:cover; border-radius: 10px 10px 0px 0px;">
+        <h1 style="font-size: 20px;font-family: 'Courier New', Courier, monospace; font-weight: bold;padding: 10px;">Frontend Development</h1>
+        <p style="font-size: 13px;padding: 0px 10px;margin: 0 !important;">"Mastering React for detailed UI,
+        Crafting animations that catch the eye.
+        With JavaScript, I ensure perfection's near,
+        Complexity? Just a challenge I cheer."
+        </p>
       </div>
-           
-    
+
+      <div style="width: 300px; height: 380px; border-radius: 10px;
+      background-color: #1e282e65; display: flex; flex-direction:column;">
+        <img src="images/back.png" alt="" style="width:300px !important; height: 180px;
+        object-fit:cover; border-radius: 10px 10px 0px 0px;">
+        <h1 style="font-size: 20px;font-family: 'Courier New', Courier, monospace; font-weight: bold;padding: 10px;">Backend Development</h1>
+        <p style="font-size: 13px;padding: 0px 10px;margin: 0 !important;">"Mastering React for detailed UI,
+        Yes, I can handle your backend in Node JS, and your data will be more secured and structured in Mongo DB. May be the backend will be more difficult to handle, but I'm always ready to challenge myself with your requirements!
+        
+        </p>
+      </div>
+
+      <div style="width: 300px; height: 380px; border-radius: 10px;
+      background-color: #1e282e65; display: flex; flex-direction:column;">
+        <img src="images/management.avif" alt="" style="width:300px !important; height: 180px;
+        object-fit:cover; border-radius: 10px 10px 0px 0px;">
+        <h1 style="font-size: 20px;font-family: 'Courier New', Courier, monospace; font-weight: bold;padding: 10px;">Project Management</h1>
+        <p style="font-size: 13px;padding: 0px 10px;margin: 0 !important;">"Mastering React for detailed UI,
+        "As a project manager, I excel in communication,
+        Building bridges with clients, a seamless operation.
+        Guiding projects with skill, from start to end,
+        Connections forged, success we'll surely extend."
+
+        </p>
+      </div>
       
-    </section>\
+          </div>
+
+    </section>
 
         <!-- ***** Work ***** -->
 
-    <section class="work" id="work">
+   <section class="work" id="portfolio">
       <div class="row">
         <h2>Recent Works</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
+        <div class="work__boxes"> 
           <div class="work__box">
-            <div class="work__text">
+            <div class="work__text"> 
               
 
-<div class="wrapper">
-  <div class="card"><img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+ <div class="wrapper">
+  <div class="card"><img src="./images/Web_Photo_Editor.jpg"/>
     <div class="info">
-      <h1>Mountain</h1>
-      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-      <button>Read More</button>
+      <a href="https://www.scaleupconclave.com/" class="projectview">View</a>
     </div>
   </div>
-  <div class="card"><img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&amp;fit=crop&amp;w=750&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+  <div class="card"><img src="./images/Untitled Project.jpg"/>
     <div class="info">
-      <h1>Road</h1>
-      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-      <button>Read More</button>
+      <a href="https://autoadmin.vercel.app/signin">View</a>
     </div>
   </div>
-  <div class="card"><img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&amp;fit=crop&amp;w=311&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"/>
+  <div class="card"><img src="./images/Project (3).jpg"/>
     <div class="info">
-      <h1>Protester</h1>
-      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-      <button>Read More</button>
+      
+      <a href="https://app.relivaglobal.com/signin">View</a>
     </div>
   </div>
 </div>
-            </div>
-             
-          </div>
+  </div>
+    </div>
 
           
-    </section>
-
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/logo.png" class="https://www.relivaglobal.com/images/logo.png" />
-          
-          
-        </div>
-        <p class="client__font">Relieva Globals</p>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
+    <!-- </section> -->
     
   </main>
 
-  <!-- ***** Contact ***** -->
-
- 
-
-  <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer" id="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://github.com/Arjunarunachalan" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
+ <div class="footercontainer">
+  <div class="contactsection">
+    <div class="contacthead">
+     <h1>Get In Touch</h1>
+    <p>
+"Let's keep in touch! Add me to your contacts and stay updated on my latest projects, collaborations, and insights. Whether you're interested in future opportunities or just want to connect, I'm always just a click away. Let's build something great together!"</p>
+    </div>
+    <div class="contactdetails">
+    <a href="tel:+917025484102">
+      <div class="phonesection">
+       <img src="./images/phone.svg" alt="phone icon">
+           <div>
+        <a href="">7025484102</a>
+       </div>
+    </a>
+    </div>
+    <div class="contactdetails">
+    <a href="mailto:arjunarunachalan@gmail.com">
+      <div class="phonesection">
+       <img src="./images/mail.svg" alt="phone icon">
+           <div>
+        <a href="">arjunarunachalan@gmail.com</a>
+       </div>
+    </a>
+    
+    </div>
+    <div class="footersocial">
+      <div class="socialicons">
       
-        <li class="footer__social-link-item">
-          <a href="mailto:arjunarunachalan@gmail.com" title="Link to Codepen Profile">
-            <img src="./images/maillogo.png" class="footer__social-image" alt="Codepen">
+          <a href="https://github.com/Arjunarunachalan" class="singleicon">
+          <img src="./images/mingcute--github-line.svg" alt="github">
           </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/arjundeveloper/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/arjundeveloper/" class="singleicon">
+          <img src="./images/mdi--linkedin (1).svg" alt="linkedin">
           </a>
-        </li>
-        <li>
-          <a href="https://wa.me/7025484102?text=hello" target="_blank">
-            <img src="./images/download.png" alt="WhatsApp" class="logo__whatsapp">
-           
+          <a href="https://www.instagram.com/itz_arjun._/" class="singleicon">
+          <img src="./images/mdi--instagram.svg" alt="instagram">
           </a>
-        </li>
-      </ul>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2023 - Template designed & developed by <a href="" class="link">Arjun</a>.
-      </p>
-      <div class="footer__github-buttons">
-       
       </div>
     </div>
+
+    
+  
+  
+    </div>
+   
+   
+  </div>
+  <div class="form section">
+
+  </div>
+ </div>
+      </div>
+    </div>
+   
+   
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">

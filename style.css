@@ -337,12 +337,13 @@ body:not(.user-is-tabbing) a:focus {
 .nav {
   display: flex;
   justify-content: flex-end;
-  padding: var(--gutter-normal) 0;
-}
 
-.nav__items {
-  display: flex;
-  list-style: none;
+  .nav__items {
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+    padding: 15px 25px;
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -364,6 +365,7 @@ body:not(.user-is-tabbing) a:focus {
 @media (max-width: 300px) {
   .nav {
     font-size: var(--font-size-small);
+    font-size: 10px;
   }
 }
 
@@ -396,6 +398,17 @@ body:not(.user-is-tabbing) a:focus {
   right: 0;
   height: 2px;
   background: var(--pink);
+}
+
+@media (max-width: 300px) {
+  .nav {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .nav__link {
+    font-size: 15px !important;
+  }
 }
 
 /* --------------------------------------- */
@@ -642,50 +655,8 @@ body:not(.user-is-tabbing) a:focus {
   max-height: 620px;
   max-width: 100%;
 }
-.servicecard {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 50px;
-  padding: 0px;
-}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  -webkit-box-shadow: 10px 10px 29px -9px rgba(51, 184, 255, 1);
-  -moz-box-shadow: 10px 10px 29px -9px rgba(51, 184, 255, 1);
-  box-shadow: 10px 10px 29px -9px rgba(51, 184, 255, 1);
-}
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 10px;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
 @media screen and (max-width: 768px) {
   .servicecard {
     display: flex;
@@ -700,14 +671,7 @@ body:not(.user-is-tabbing) a:focus {
     max-height: 100%;
     max-width: 100%;
   }
-  .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 360px;
-    perspective: 1000px;
-    border-radius: 10px;
-    margin: 0px auto;
-  }
+ 
 }
 * {
   box-sizing: border-box;
@@ -726,7 +690,6 @@ body:not(.user-is-tabbing) a:focus {
   width: 300px;
   height: 360px;
   border-radius: 15px;
-  padding: 1.5rem;
   background: white;
   position: relative;
   display: flex;
@@ -734,8 +697,19 @@ body:not(.user-is-tabbing) a:focus {
   transition: 0.4s ease-out;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
+.info {
+  width: 300px;
+  height: 360px;
+  position: absolute;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card:hover {
   transform: translateY(20px);
+  background: #f6083a;
 }
 .card:hover:before {
   opacity: 1;
@@ -743,6 +717,19 @@ body:not(.user-is-tabbing) a:focus {
 .card:hover .info {
   opacity: 1;
   transform: translateY(0px);
+  background-color: #f6083a;
+  opacity: 70%;
+}
+.card:hover .info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 3px 20px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
 }
 .card:before {
   content: "";
@@ -796,10 +783,8 @@ body:not(.user-is-tabbing) a:focus {
   transition: 0.4s ease;
 }
 .card .info button:hover {
-  background: dodgerblue;
   color: white;
 }
-
 
 @media screen and (max-width: 768px) {
   .wrapper {
@@ -810,4 +795,118 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     gap: 100px;
   }
+}
+
+.footercontainer {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.contacthead {
+  display: flex;
+  flex-direction: column;
+}
+.contactsection {
+  max-width: 50%;
+}
+.formsection {
+  max-width: 50%;
+}
+.phonesection {
+  width: 100%;
+  max-width: 100%;
+  background-color: #1e282e65;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+.phonesection:hover {
+  border: 1px solid #f6083a;
+  border-radius: 7px;
+}
+.contactdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+.socialicons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.singleicon {
+  width: 50px;
+  height: 50px;
+  background-color: #1e282e65;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleicon img {
+  width: 25px;
+}
+
+.singleicon:hover {
+  background-color: #f6083a;
+}
+.findmeon {
+  font-size: 15px;
+  margin: 30px 0px 15px 0px;
+}
+.footersocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .footercontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .contacthead {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactsection {
+    max-width: 100%;
+  }
+  .formsection {
+    max-width: 100%;
+  }
+  .socialicons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+.servicecards{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+@media  screen and (max-width:768px) {
+  .servicecards{
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+gap: 50px;
+}
 }
