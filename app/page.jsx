@@ -3,6 +3,20 @@ import Image from "next/image";
 import profile from "../public/assets/images/profile.png";
 import Waves from '../app/components/Waves';
 import InfiniteScroll from "./components/Infinite_Scroll";
+import Nextjs from "../public/assets/icons/nextjs"
+import React from "../public/assets/icons/react"
+import Tailwind from "../public/assets/icons/tailwind";
+import Node from "../public/assets/icons/node";
+import Express from "../public/assets/icons/express";
+import Mongodb from "../public/assets/icons/mongodb";
+import Javascript from "../public/assets/icons/javascript";
+import next from "next";
+import Navbar from "./components/Navbar";
+import linkedin from "../public/assets/icons/linkedin.svg"
+import github from "../public/assets/icons/git.svg"
+import instagram from "../public/assets/icons/instagram.svg"
+import mail from "../public/assets/icons/mail.svg"
+
 export default function Home() {
   const items = [
     {
@@ -38,6 +52,7 @@ export default function Home() {
   ];
   return (
     <div className="min-h-screen bg-background  md:py-[30px] py-[20px]">
+      <Navbar />
       {/* hero */}
       <section className=" w-full md:h-[100vh] flex md:flex-row flex-col pt-3 md:px-[100px] px-[15px] relative">
         {/* Left Section */}
@@ -58,9 +73,10 @@ export default function Home() {
                 experience
               </p>
               <div className="flex gap-3 items-center mt-3">
-                <div>Insta</div>
-                <div>Insta</div>
-                <div>Insta</div>
+                <div><Image src={linkedin} alt="linkedin" width={100} height={100} className="w-[35px] h-[50px]"/></div>
+                <div><Image src={github} alt="linkedin" width={100} height={100} className="w-[35px] h-[50px]"/></div>
+                <div><Image src={instagram} alt="linkedin" width={100} height={100} className="w-[35px] h-[50px]"/></div>
+                <div><Image src={mail} alt="linkedin" width={100} height={100} className="w-[35px] h-[50px]"/></div>
               </div>
             </div>
           </div>
@@ -89,29 +105,30 @@ export default function Home() {
           paddingLeft: 0,
           paddingRight: 0,
         }}
-        className="w-full px-0 bg-bg_light flex flex-col  gap-4 justify-center items-center h-[300px] md:h-[450px] shadow-xl">
-        <h1 className="text-center md:text-[35px] text-[30px] font-bold text-white_grad py-4">My <span className="text-yellow_gradient">Tech</span>stack </h1>
-        <div className="flex md:gap-[30px] gap-[25px]  flex-wrap justify-center items-center">
+        className="w-full px-0 bg-bg_light flex flex-col  gap-4 justify-center items-center h-[500px] md:h-[300px] shadow-xl relative">
+           <h1 className="w-full text-[22px] text-white_grad  md:px-[100px] px-3 md:absolute md:top-[40px]">My <span className="text-yellow_gradient z-50">Tech </span>stack</h1>
+        {/* <h1 className="text-start w-full md:px-[100px]  md:items-start md:text-[35px] text-[30px] font-bold text-white_grad md:py-0 py-4">My <span className="text-yellow_gradient">Tech</span>stack </h1> */}
+        <div className="flex md:gap-[30px] gap-[25px] flex-wrap justify-center items-center">
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            React JS
+            <Nextjs  />
           </div>
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            Next JS
+            <React  />
           </div>
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            Tailwind CSS
+            <Tailwind />
           </div>
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            JavaScript
+            <Javascript />
           </div>
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            Node JS
+            <Node />
           </div>
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            Express JS
+            <Express  />
           </div>
           <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-            MongoDB
+            <Mongodb  />
           </div>
         </div>
       </section>
