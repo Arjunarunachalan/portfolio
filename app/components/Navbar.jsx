@@ -17,6 +17,7 @@ const Navbar = () => {
   const closeModal = () => {
     setToggle(false);
     console.log("Menu closed:", false);
+    
   };
 
   return (
