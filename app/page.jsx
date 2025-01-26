@@ -14,7 +14,7 @@ import next from "next";
 import Navbar from "./components/Navbar";
 import linkedin from "../public/assets/icons/linkedin.svg"
 import github from "../public/assets/icons/git.svg"
-import instagram from "../public/assets/icons/instagram.svg"
+import instagram from "../public/assets/icons/Instagram.svg"
 import mail from "../public/assets/icons/mail.svg"
 
 export default function Home() {
