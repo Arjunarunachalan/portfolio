@@ -19,6 +19,7 @@ import mail from "../public/assets/icons/mail.svg"
 import Footer from "./components/Footer";
 import { useRef } from "react";
 import Crosshair from "./components/Crosshair";
+import Location from "./components/Location";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -61,10 +62,10 @@ export default function Home() {
         {/* hero */}
         <section className="w-full md:h-[100vh] h-[80vh] flex flex-col md:flex-row items-center md:pt-8 md:px-[100px] relative">
           {/* Left Section */}
-          <div className="md:w-[50%] w-full flex flex-col justify-center items-center md:order-1 order-2 md:mb-0 mb-10 md:static absolute top-[280px] z-50 py-[0px] md:py-0">
+          <div className="md:w-[50%] w-full flex flex-col justify-center items-center md:order-1 order-2 md:mb-0 mb-10 md:static absolute top-[280px] z-20 py-[0px] md:py-0">
 
             <div className="w-full px-5 py-1 md:py-0 md:bg-transparent md:rounded-none ">
-              <h1 className="text-[28px] md:text-[48px] text-white_grad font-semibold text-center md:text-left z-50">
+              <h1 className="text-[28px] md:text-[48px] text-white_grad font-semibold text-center md:text-left z-20">
                 Hi, I'm <span className="text-yellow_gradient">Arjun</span>
               </h1>
               <h1 className="font-extrabold text-[3rem] md:text-[9rem] text-white w-full leading-none text-center md:text-left">
@@ -271,6 +272,7 @@ export default function Home() {
       </div>
     </section>
       </div>
+      <Location />
       <Footer />
     </div>
 
