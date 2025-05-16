@@ -1,4 +1,4 @@
-'use client'; 
+'use client';
 import Image from "next/image";
 import profile from "../public/assets/images/profile.png";
 import Waves from '../app/components/Waves';
@@ -23,7 +23,7 @@ import { toast } from 'react-toastify';
 
 export default function Home() {
   const containerRef = useRef(null);
-  const [copyToggle,setCopyToggle] = useState(false)
+  const [copyToggle, setCopyToggle] = useState(false)
   const items = [
     {
       content: <div className="flex flex-col justify-center items-center md:w-[60%] w-full">
@@ -57,21 +57,21 @@ export default function Home() {
     },
   ];
 
- const copyEmailToClipboard = (email) => {
-  navigator.clipboard.writeText(email)
-    .then(() => {
-      setCopyToggle(true)
-      setTimeout(()=>{
+  const copyEmailToClipboard = (email) => {
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        setCopyToggle(true)
+        setTimeout(() => {
+          setCopyToggle(false)
+        }, 5000)
+      })
+      .catch((err) => {
+        console.error('Failed to copy email: ', err);
         setCopyToggle(false)
-      },5000)
-    })
-    .catch((err) => {
-      console.error('Failed to copy email: ', err);
-      setCopyToggle(false)
-    });
-};
+      });
+  };
 
- 
+
   return (
     <div>
       <Navbar />
@@ -98,11 +98,20 @@ export default function Home() {
                 </p>
                 {/* Social Icons */}
                 <div className="flex justify-center md:justify-start gap-4 items-center mt-4">
-                  <Image src={linkedin} alt="linkedin" width={35} height={35} className="w-[30px] h-[30px]" />
-                  <Image src={github} alt="github" width={35} height={35} className="w-[30px] h-[30px]" />
-                  <Image src={instagram} alt="instagram" width={35} height={35} className="w-[30px] h-[30px]" />
-                  <Image src={mail} alt="mail" width={35} height={35} className="w-[30px] h-[30px]" />
+                  <a href="https://www.linkedin.com/in/arjundeveloper/" target="_blank" rel="noopener noreferrer" className="hover:bg-[#fb5607] rounded-full p-1 transition-colors">
+                    <Image src={linkedin} alt="linkedin" width={35} height={35} className="w-[30px] h-[30px]" />
+                  </a>
+                  <a href="https://github.com/Arjunarunachalan" target="_blank" rel="noopener noreferrer" className="hover:bg-[#fb5607] rounded-full p-1 transition-colors">
+                    <Image src={github} alt="github" width={35} height={35} className="w-[30px] h-[30px]" />
+                  </a>
+                  <a href="https://www.instagram.com/just_arju._/" target="_blank" rel="noopener noreferrer" className="hover:bg-[#fb5607] rounded-full p-1 transition-colors">
+                    <Image src={instagram} alt="instagram" width={35} height={35} className="w-[30px] h-[30px]" />
+                  </a>
+                  <a href="mailto:arjunarunachalan@gmail.com" className="hover:bg-[#fb5607] rounded-full p-1 transition-colors">
+                    <Image src={mail} alt="mail" width={35} height={35} className="w-[30px] h-[30px]" />
+                  </a>
                 </div>
+
               </div>
             </div>
           </div>
@@ -191,7 +200,7 @@ export default function Home() {
           <div className="w-full flex flex-col md:flex-row md:justify-between justify-start md:items-center items-start gap-2">
             <p className="text-[18px] font-semibold text-white_grad md:w-[60%] w-full px-[15px] md:px-0">Here’s a glimpse of the work I’ve done for clients and projects that I’m proud of. Each piece tells a story of creativity, strategy, and execution coming together to achieve success.</p>
             <a href="https://github.com/Arjunarunachalan" target="_blank">
-            <button className="bg-yellow_gradient flex text-black p-3 font-semibold rounded-md shadow-lg md:mx-0 mx-[15px] my-3 md:px-[15px] px-[30px]">More On Github</button>
+              <button className="bg-yellow_gradient flex text-black p-3 font-semibold rounded-md shadow-lg md:mx-0 mx-[15px] my-3 md:px-[15px] px-[30px]">More On Github</button>
             </a>
           </div>
 
@@ -249,54 +258,54 @@ export default function Home() {
         </section>
 
         <section
-      ref={containerRef}
-      className="w-full md:h-[400px] h-[550px] shadow-md md:px-[100px] px-[15px] py-[50px] relative"
-    >
-      {/* Crosshair Overlay */}
-      <Crosshair containerRef={containerRef} color="white" />
-
-      <div className="w-full h-full bg-bg_light rounded-xl flex flex-col pt-3 p-[30px] justify-center gap-4 relative">
-        <h1 className="text-white md:text-[70px] text-[30px] font-extrabold tracking-tighter">
-          Take the Next Step
-        </h1>
-        <h1 className="text-white_grad md:text-[22px] text-[18px] font-semibold tracking-wide md:w-[60%] w-full">
-          Let’s connect and discuss how we can work together to achieve your
-          goals. Your next big step starts here.
-        </h1>
-
-        {/* Buttons with Hover Effect */}
-        <div className="flex flex-row gap-5">
-     <a href="mailto:arjunarunachalan@gmail.com" target="_blank" rel="noopener noreferrer">
-          <button className="bg-yellow_gradient flex justify-center items-center text-black font-bold rounded-md shadow-lg my-3 md:px-[15px] px-[4px] md:text-[20px] md:py-2 text-[10px] hover:scale-105 transition-transform">
-            Shoot Me an Email
-          </button>
-          </a>
-          <a href="tel:7025484102">
-          <button className="bg-black flex justify-center items-center text-white p-3 font-semibold rounded-md shadow-lg my-3 md:px-[15px] px-[4px] md:text-[20px] md:py-2 text-[10px] hover:scale-105 transition-transform">
-            Dial Me!
-          </button>
-          </a>
-        </div>
-
-        {/* Contact Info Box */}
-        <div
-          className="md:w-[250px] w-[220px] bg-yellow_gradient text-black md:rounded-b-3xl rounded-b-xl
-                   absolute md:right-7 right-3 md:py-[20px] py-[10px] top-1 flex justify-center items-center"
+          ref={containerRef}
+          className="w-full md:h-[400px] h-[550px] shadow-md md:px-[100px] px-[15px] py-[50px] relative"
         >
-          <div className="flex gap-2 justify-center items-center" onClick={()=>{copyEmailToClipboard(' arjunarunachalan@gmail.com')}}>
-            <p className="md:text-[12px] text-[10px]">
-              arjunarunachalan@gmail.com
-            </p>
-            <button className="bg-black text-white rounded-md py-1 px-2 text-[10px]">
-             {copyToggle ? 'Copied' : 'Copy'}
-            </button>
+          {/* Crosshair Overlay */}
+          <Crosshair containerRef={containerRef} color="white" />
+
+          <div className="w-full h-full bg-bg_light rounded-xl flex flex-col pt-3 p-[30px] justify-center gap-4 relative">
+            <h1 className="text-white md:text-[70px] text-[30px] font-extrabold tracking-tighter">
+              Take the Next Step
+            </h1>
+            <h1 className="text-white_grad md:text-[22px] text-[18px] font-semibold tracking-wide md:w-[60%] w-full">
+              Let’s connect and discuss how we can work together to achieve your
+              goals. Your next big step starts here.
+            </h1>
+
+            {/* Buttons with Hover Effect */}
+            <div className="flex flex-row gap-5">
+              <a href="mailto:arjunarunachalan@gmail.com" target="_blank" rel="noopener noreferrer">
+                <button className="bg-yellow_gradient flex justify-center items-center text-black font-bold rounded-md shadow-lg my-3 md:px-[15px] px-[5px] md:text-[20px] md:py-2 py-[10px] text-[10px] hover:scale-105 transition-transform">
+                  Shoot Me an Email
+                </button>
+              </a>
+              <a href="tel:7025484102">
+                <button className="md:w-auto w-[130px] md:h-auto h-[38px] bg-black flex justify-center items-center text-white p-3 font-semibold rounded-md shadow-lg my-3 md:px-[15px] px-[10px] md:text-[20px] md:py-2 py-[10px] text-[10px] hover:scale-105 transition-transform">
+                  Dial Me!
+                </button>
+              </a>
+            </div>
+
+            {/* Contact Info Box */}
+            <div
+              className="md:w-[250px] w-[220px] bg-yellow_gradient text-black md:rounded-b-3xl rounded-b-xl
+                   absolute md:right-7 right-3 md:py-[20px] py-[10px] top-1 flex justify-center items-center"
+            >
+              <div className="flex gap-2 justify-center items-center" onClick={() => { copyEmailToClipboard(' arjunarunachalan@gmail.com') }}>
+                <p className="md:text-[12px] text-[10px]">
+                  arjunarunachalan@gmail.com
+                </p>
+                <button className="bg-black text-white rounded-md py-1 px-2 text-[10px]">
+                  {copyToggle ? 'Copied' : 'Copy'}
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
       </div>
       <div id="getintouch">
-      <Footer />
+        <Footer />
       </div>
     </div>
 
