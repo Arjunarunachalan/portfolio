@@ -21,6 +21,17 @@ const Navbar = () => {
     }
   },[toggle])
 
+  // utils/downloadResume.js (optional file to keep logic separate)
+ const downloadResume = () => {
+  const link = document.createElement('a');
+  link.href = '/Arjun.pdf'; // public path
+  link.download = 'Arjun.pdf'; // filename after download
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
   return (
     <>
       {/* Desktop Navbar */}
@@ -38,11 +49,17 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <div className="w-[50%] flex justify-between items-center text-white text-lg font-semibold">
-          <div className="cursor-pointer hover:text-yellow_gradient transition-colors">Home</div>
+          <a href="#">
+          <div className="cursor-pointer hover:text-yellow_gradient transition-colors" >Home</div>
+          </a>
+          <a href="#portfolio">
           <div className="cursor-pointer hover:text-yellow_gradient transition-colors">Portfolio</div>
+          </a>
           <div className="font-normal h-full p-0 m-0">|</div>
+          <a href="#getintouch">
           <div className="cursor-pointer hover:text-yellow_gradient transition-colors">Get In Touch</div>
-          <div className="cursor-pointer hover:text-yellow_gradient transition-colors border-2 border-yellow_gradient p-1 rounded-lg px-2">Download Resume</div>
+          </a>
+          <div className="cursor-pointer hover:text-yellow_gradient transition-colors border-2 border-yellow_gradient p-1 rounded-lg px-2" onClick={downloadResume}>Download Resume</div>
         </div>
       </div>
 

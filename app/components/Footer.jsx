@@ -20,9 +20,9 @@ const Footer = () => {
                     Give me a shoutout on my <span className='text-yellow_gradient font-semibold md:text-[25px] text-[20px]'>socials</span>
                 </h1>
                 <div className=' flex gap-4 font-normal md:text-[14px] text-[12px] md:pt-[20px] z-50 '>
-                    <a href="" className='hover:text-yellow_gradient'>/ linkedin</a>
-                    <a href="" className='hover:text-yellow_gradient'>/ Instagram</a>
-                    <a href="" className='hover:text-yellow_gradient'>/ Github</a>
+                    <a href="http://linkedin.com/in/arjundeveloper/" target='_blank' className='hover:text-yellow_gradient'>/ linkedin</a>
+                    <a href="https://www.instagram.com/just_arju._/" target='_blank' className='hover:text-yellow_gradient'>/ Instagram</a>
+                    <a href="https://github.com/Arjunarunachalan" target='_blank' className='hover:text-yellow_gradient'>/ Github</a>
                 </div>
                 <div className="absolute right-0 inset-0 w-full h-full bg-transparent z-0 ms-[120px] hidden md:flex"
                     style={{

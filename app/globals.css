@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -94,3 +99,29 @@ body {
         min-height: 600px;
         
       }
+
+      /* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #eb8317; /* color of the thumb */
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #181818; /* color on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #eb8317 #181818;
+}

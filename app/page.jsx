@@ -1,4 +1,4 @@
-"use client"
+'use client'; 
 import Image from "next/image";
 import profile from "../public/assets/images/profile.png";
 import Waves from '../app/components/Waves';
@@ -17,12 +17,13 @@ import github from "../public/assets/icons/git.svg"
 import instagram from "../public/assets/icons/Instagram.svg"
 import mail from "../public/assets/icons/mail.svg"
 import Footer from "./components/Footer";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Crosshair from "./components/Crosshair";
-import Location from "./components/Location";
+import { toast } from 'react-toastify';
 
 export default function Home() {
   const containerRef = useRef(null);
+  const [copyToggle,setCopyToggle] = useState(false)
   const items = [
     {
       content: <div className="flex flex-col justify-center items-center md:w-[60%] w-full">
@@ -31,7 +32,7 @@ export default function Home() {
         <p className="text-white_grad w-full texx-[12px]">Deal n Buy is an online shopping platform that offers a wide variety of products across multiple categories, including electronics,
           home appliances, fashion, and more. The website aims to provide customers with high-quality products at competitive prices, ensuring a seamless shopping experience through user-friendly navigation, secure payment options, and reliable delivery services. Whether you're looking for the latest gadgets or trendy apparel, Deal n Buy is your one-stop destination for all your shopping needs.</p>
         <p className="text-gray-500 w-full text-start py-3 "> React, Scss, Node Js , Mongo DB, SocketIO</p>
-        <a href="" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
+        <a href="https://dealnbuy.in/" target="_blank" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
       </div>
     },
 
@@ -41,7 +42,7 @@ export default function Home() {
         <p className="text-[18px] text-gray-400 w-full text-start pb-3">Student Management</p>
         <p className="text-white_grad w-full">Capital Forex is a trusted platform specializing in forex trading education and services. The website provides comprehensive training programs, market insights, and resources to help individuals and businesses succeed in the dynamic forex market. With expert guidance and a focus on empowering traders, Capital Forex is dedicated to fostering financial growth and confidence through strategic trading approaches and cutting-edge tools. Whether you're a beginner or an experienced trader, Capital Forex is your partner in mastering the world of forex.</p>
         <p className="text-gray-500 w-full text-start py-3 "> NextJS ,Tailwind Css ,GSAP,Mongo DB ,Node Js </p>
-        <a href="" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
+        <a href="https://www.capitalforex.in/" target="_blank" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
       </div>
     },
 
@@ -51,10 +52,26 @@ export default function Home() {
         <p className="text-[18px] text-gray-400 w-full text-start pb-3">Management</p>
         <p className="text-white_grad w-full">The Club Orly Rungis website is a membership-based organization or community,focused on fostering connections and providing services or benefits to its members. COR cater to individuals or businesses associated with the Orly and Rungis regions in France, potentially serving as a networking hub, a business directory, or a resource platform.</p>
         <p className="text-gray-500 w-full text-start py-3 "> NextJS ,Tailwind Css,Framer Motion,Mongo DB ,Node Js </p>
-        <a href="" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
+        <a href="https://cluborlyrungis.com/" target="_blank" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
       </div>
     },
   ];
+
+ const copyEmailToClipboard = (email) => {
+  navigator.clipboard.writeText(email)
+    .then(() => {
+      setCopyToggle(true)
+      setTimeout(()=>{
+        setCopyToggle(false)
+      },5000)
+    })
+    .catch((err) => {
+      console.error('Failed to copy email: ', err);
+      setCopyToggle(false)
+    });
+};
+
+ 
   return (
     <div>
       <Navbar />
@@ -152,28 +169,30 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:justify-between justify-center items-center gap-[30px] md:gap-0">
             <div className="flex flex-col gap-4 text-[#8491a0] w-[300px] md:w-[400px]">
               <h1 className="font-semibold text-[100px] md:text-[120]">01</h1>
-              <h3 className="text-start text-white_grad md:text-[35px] text-[25px] font-semibold "><span className="text-[#3cc74e]">Intutive Software Corp</span>, Interaction Designer</h3>
-              <h5 className="text-start text-white_grad">I currently am the lead designer on the interaction design team for Google Play.</h5>
+              <h3 className="text-start text-white_grad md:text-[35px] text-[25px] font-semibold "><span className="text-[#3cc74e]">Intutive Software Corp</span>, Frontend Developer</h3>
+              <h5 className="text-start text-white_grad">I currently work as a Frontend Developer, focusing on building interactive and user-friendly interfaces.</h5>
             </div>
             <div className="flex flex-col gap-4 text-[#8491a0] w-[300px] md:w-[400px]">
               <h1 className="font-semibold text-[100px] md:text-[120]">02</h1>
-              <h3 className="text-start text-white_grad md:text-[35px] text-[25px]  font-semibold"><span className="text-[#609bff]">Vass Systems LLP</span>, Interaction Designer</h3>
-              <h5 className="text-start text-white_grad">I currently am the lead designer on the interaction design team for Google Play.</h5>
+              <h3 className="text-start text-white_grad md:text-[35px] text-[25px]  font-semibold"><span className="text-[#609bff]">Vass Systems LLP</span>, Frontend Developer Intern</h3>
+              <h5 className="text-start text-white_grad">I previously worked as a Frontend Intern, where I contributed to developing responsive UI components and improving user experience..</h5>
             </div>
             <div className="flex flex-col gap-4 text-[#8491a0] w-[300px] md:w-[400px]">
               <h1 className="font-semibold text-[100px] md:text-[120]">03</h1>
-              <h3 className="text-start text-white_grad md:text-[35px] text-[25px]  font-semibold"><span className="text-[#e95d90]">Softroniics</span>, Interaction Designer</h3>
-              <h5 className="text-start text-white_grad z-50">I currently am the lead designer on the interaction design team for Google Play.</h5>
+              <h3 className="text-start text-white_grad md:text-[40px] text-[25px]   font-semibold"><span className="text-[#e95d90]">Softroniics</span>, FullStack Developer Trainee</h3>
+              <h5 className="text-start text-white_grad z-50">I completed training as a Full Stack Trainee, gaining hands-on experience in both frontend and backend development.</h5>
             </div>
           </div>
         </section>
 
-        <section className="w-full flex flex-col pt-3 md:px-[100px] px-[15px] md:py-[40px] py-[20px]">
+        <section className="w-full flex flex-col pt-3 md:px-[100px] px-[15px] md:py-[40px] py-[20px]" id="portfolio">
           <h1 className="text-[22px] text-yellow_gradient font-semibold py-[30px] px-[15px]">Portfolio</h1>
           <h1 className="w-full md:w-[860px] md:text-[60px] text-[35px] font-bold text-white_grad py-4 md:px-0 px-[15px]">Results <span className="text-yellow_gradient">That</span>  Matter</h1>
           <div className="w-full flex flex-col md:flex-row md:justify-between justify-start md:items-center items-start gap-2">
             <p className="text-[18px] font-semibold text-white_grad md:w-[60%] w-full px-[15px] md:px-0">Here’s a glimpse of the work I’ve done for clients and projects that I’m proud of. Each piece tells a story of creativity, strategy, and execution coming together to achieve success.</p>
+            <a href="https://github.com/Arjunarunachalan" target="_blank">
             <button className="bg-yellow_gradient flex text-black p-3 font-semibold rounded-md shadow-lg md:mx-0 mx-[15px] my-3 md:px-[15px] px-[30px]">More On Github</button>
+            </a>
           </div>
 
           {/* projects */}
@@ -187,7 +206,7 @@ export default function Home() {
                 <p className="text-gray-500 w-full text-start py-3 "> React, Scss, Node Js , Mongo DB, SocketIO</p>
               </div>
               <div className="w-[50%] h-auto flex md:justify-center items-center">
-                <a href="" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
+                <a href="https://dealnbuy.in/" target="_blank" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
               </div>
             </div>
             <div className=" flex md:flex-row flex-col md:justify-between justify-center px-[15px] md:px-[30px] md:py-[20px]">
@@ -198,7 +217,7 @@ export default function Home() {
                 <p className="text-gray-500 w-full text-start py-3 "> NextJS ,Tailwind Css ,GSAP,Mongo DB ,Node Js </p>
               </div>
               <div className="w-[50%] h-auto flex md:justify-center items-center">
-                <a href="" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
+                <a href="https://www.capitalforex.in/" target="_blank" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
               </div>
             </div>
             <div className=" flex md:flex-row flex-col md:justify-between justify-center px-[15px] md:px-[30px] md:py-[20px]">
@@ -209,7 +228,7 @@ export default function Home() {
                 <p className="text-gray-500 w-full text-start py-3 "> NextJS ,Tailwind Css,Framer Motion,Mongo DB ,Node Js </p>
               </div>
               <div className="w-[50%] h-auto flex md:justify-center items-center">
-                <a href="" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
+                <a href="https://cluborlyrungis.com/" target="_blank" className="text-yellow_gradient font-semibold text-[22px]">Live Preview</a>
               </div>
             </div>
           </div>
@@ -247,12 +266,16 @@ export default function Home() {
 
         {/* Buttons with Hover Effect */}
         <div className="flex flex-row gap-5">
+     <a href="mailto:arjunarunachalan@gmail.com" target="_blank" rel="noopener noreferrer">
           <button className="bg-yellow_gradient flex justify-center items-center text-black font-bold rounded-md shadow-lg my-3 md:px-[15px] px-[4px] md:text-[20px] md:py-2 text-[10px] hover:scale-105 transition-transform">
             Shoot Me an Email
           </button>
+          </a>
+          <a href="tel:7025484102">
           <button className="bg-black flex justify-center items-center text-white p-3 font-semibold rounded-md shadow-lg my-3 md:px-[15px] px-[4px] md:text-[20px] md:py-2 text-[10px] hover:scale-105 transition-transform">
             Dial Me!
           </button>
+          </a>
         </div>
 
         {/* Contact Info Box */}
@@ -260,20 +283,21 @@ export default function Home() {
           className="md:w-[250px] w-[220px] bg-yellow_gradient text-black md:rounded-b-3xl rounded-b-xl
                    absolute md:right-7 right-3 md:py-[20px] py-[10px] top-1 flex justify-center items-center"
         >
-          <div className="flex gap-2 justify-center items-center">
+          <div className="flex gap-2 justify-center items-center" onClick={()=>{copyEmailToClipboard(' arjunarunachalan@gmail.com')}}>
             <p className="md:text-[12px] text-[10px]">
               arjunarunachalan@gmail.com
             </p>
             <button className="bg-black text-white rounded-md py-1 px-2 text-[10px]">
-              Copy
+             {copyToggle ? 'Copied' : 'Copy'}
             </button>
           </div>
         </div>
       </div>
     </section>
       </div>
-      <Location />
+      <div id="getintouch">
       <Footer />
+      </div>
     </div>
 
   );
