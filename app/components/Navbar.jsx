@@ -24,13 +24,18 @@ const Navbar = () => {
   // utils/downloadResume.js (optional file to keep logic separate)
  const downloadResume = () => {
   const link = document.createElement('a');
-  link.href = '/Arjun.pdf'; // public path
-  link.download = 'Arjun.pdf'; // filename after download
+  link.href = '/Arjun.pdf'; // The file must be in the "public" folder
+  link.setAttribute('download', 'Arjun.pdf'); // Set download attribute
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 };
 
+const handleResume = () => {
+  setToggle(false);
+  downloadResume();
+  
+};
 
   return (
     <>
@@ -86,12 +91,21 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
         className="md:hidden fixed top-0 right-0 h-full w-[100%] bg-background text-white shadow-lg flex flex-col items-center justify-center space-y-6 z-40"
       >
-        <div className="w-full h-full flex justify-center items-center flex-col gap-4 "> 
-        <div className="cursor-pointer hover:text-yellow_gradient transition-colors" onClick={() => setToggle(false)}>Home</div>
-        <div className="cursor-pointer hover:text-yellow_gradient transition-colors" onClick={() => setToggle(false)}>Portfolio</div>
-        <div className="cursor-pointer hover:text-yellow_gradient transition-colors" onClick={() => setToggle(false)}>Get In Touch</div>
-        <div className="cursor-pointer hover:text-yellow_gradient transition-colors border-2 border-yellow_gradient px-6 rounded-md " onClick={() => setToggle(false)}>Resume</div>
-        </div>
+       <div className="w-full h-full flex justify-center items-center flex-col gap-4"> 
+  <a href="#" onClick={() => setToggle(false)} className="cursor-pointer hover:text-yellow_gradient transition-colors">
+    Home
+  </a>
+  <a href="#portfolio" onClick={() => setToggle(false)} className="cursor-pointer hover:text-yellow_gradient transition-colors">
+    Portfolio
+  </a>
+  <a href="#getintouch" onClick={() => setToggle(false)} className="cursor-pointer hover:text-yellow_gradient transition-colors">
+    Get In Touch
+  </a>
+  <div onClick={() => handleResume()} className="cursor-pointer hover:text-yellow_gradient transition-colors border-2 border-yellow_gradient px-6 rounded-md">
+    Resume
+  </div>
+</div>
+
       </motion.div>
     </>
   );

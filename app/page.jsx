@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 import { useRef, useState } from "react";
 import Crosshair from "./components/Crosshair";
 import { toast } from 'react-toastify';
+import ScrollToTop from "./components/ScrollTop";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -77,7 +78,7 @@ export default function Home() {
       <Navbar />
       <div className="min-h-screen bg-background  md:py-[30px] ">
         {/* hero */}
-        <section className="w-full md:h-[100vh] h-[80vh] flex flex-col md:flex-row items-center md:pt-8 md:px-[100px] relative">
+        <section id="hero" className="w-full md:h-[100vh] h-[80vh] flex flex-col md:flex-row items-center md:pt-8 md:px-[100px] relative">
           {/* Left Section */}
           <div className="md:w-[50%] w-full flex flex-col justify-center items-center md:order-1 order-2 md:mb-0 mb-10 md:static absolute top-[280px] z-20 py-[0px] md:py-0">
 
@@ -306,6 +307,7 @@ export default function Home() {
       </div>
       <div id="getintouch">
         <Footer />
+        <ScrollToTop />
       </div>
     </div>
 
