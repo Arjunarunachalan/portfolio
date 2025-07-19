@@ -21,6 +21,8 @@ import { useRef, useState } from "react";
 import Crosshair from "./components/Crosshair";
 import { toast } from 'react-toastify';
 import ScrollToTop from "./components/ScrollTop";
+import BallpitCanvas  from "./components/Ballpit";
+import Ballpit from "./components/Ballpit";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -143,32 +145,11 @@ export default function Home() {
             paddingLeft: 0,
             paddingRight: 0,
           }}
-          className="w-full px-0 bg-bg_light flex flex-col  gap-4 justify-center items-center h-[500px] md:h-[300px] shadow-xl relative">
+          className="w-full px-0 bg-bg_light flex flex-col  gap-4 justify-center items-center h-[500px] overflow-hidden md:h-[300px] shadow-xl relative z-10">
+           
           <h1 className="w-full text-[22px] text-white_grad  md:px-[100px] px-3 md:absolute md:top-[40px]">My <span className="text-yellow_gradient ">Tech </span>stack</h1>
-          {/* <h1 className="text-start w-full md:px-[100px]  md:items-start md:text-[35px] text-[30px] font-bold text-white_grad md:py-0 py-4">My <span className="text-yellow_gradient">Tech</span>stack </h1> */}
-          <div className="flex md:gap-[30px] gap-[25px] flex-wrap justify-center items-center">
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <Nextjs />
-            </div>
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <React />
-            </div>
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <Tailwind />
-            </div>
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <Javascript />
-            </div>
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <Node />
-            </div>
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <Express />
-            </div>
-            <div className="text-white_grad bg-gray-800 rounded-lg px-4 py-2 shadow-md hover:bg-gray-700 transition duration-300">
-              <Mongodb />
-            </div>
-          </div>
+          
+            <Ballpit />
         </section>
         {/* experience */}
 
