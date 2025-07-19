@@ -70,10 +70,10 @@ const Ballpit = () => {
             {icons.map(({ name, Icon }, idx) => (
                 <div
                     key={idx}
-                    className="ball absolute w-[140px] h-[140px] rounded-full bg-white shadow-xl flex flex-col items-center justify-center pointer-events-auto"
+                    className="ball absolute md:w-[140px] w-[100px] md:h-[140px] h-[100px] rounded-full bg-white shadow-xl flex flex-col items-center justify-center pointer-events-auto"
                     title={name} // optional: shows name on hover
                 >
-                    <Icon className="w-12 h-12 mb-1" />
+                    <Icon className="md:w-12 w-8 md:h-12 h-8 mb-1" />
                     <span className="text-xs font-semibold">{name}</span>
                 </div>
             ))}
