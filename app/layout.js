@@ -27,6 +27,9 @@ export const metadata = {
   title: "Arjun | Frontend Developer",
   description:
     "Passionate Frontend Developer specializing in React.js and Next.js. Experienced in building modern, responsive, and user-friendly web applications with clean code and scalable architecture.",
+    icons: {
+    icon: "/assets/icons/logoarju.png",
+  },
 };
 
 
